@@ -15,8 +15,7 @@ ENV SAM2_BUILD_CUDA=0
 ENV MODEL_SIZE=${MODEL_SIZE}
 
 # Install system requirements
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ffmpeg \
+RUN ln -sf /bin/ffmpeg /opt/conda/bin/ffmpeg    ffmpeg \
     libavutil-dev \
     libavcodec-dev \
     libavformat-dev \
